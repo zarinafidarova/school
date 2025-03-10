@@ -60,13 +60,24 @@
 <body>
     <div class="container">
         <h2>Вход</h2>
+
+        <!-- Выводим ошибки, если они есть -->
+        @if($errors->any())
+            <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        {{ $error }}
+                    @endforeach
+            </div>
+        @endif
+
         <form action="{{ route('login.post') }}" method="POST">
             @csrf
-            <input type="text" name="login" placeholder="Логин" required>
+            <input type="text" name="login" placeholder="Логин" required value="{{ old('login') }}">
             <input type="password" name="password" placeholder="Пароль" required>
             <button type="submit">Войти</button>
         </form>
     </div>
 </body>
+
 
 </html>

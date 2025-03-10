@@ -2,6 +2,9 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
+
 
 class Students extends Authenticatable
 {
@@ -20,5 +23,10 @@ class Students extends Authenticatable
     {
         return 'login';
     }
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = Hash::make($value);
+    }
+    public $timestamps = false;
 }
 ?>

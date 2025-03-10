@@ -10,7 +10,6 @@
 
 </head>
 <body>
-
     <!-- Шапка -->
     <header class="header">
         <div class="container">
@@ -23,7 +22,6 @@
             </nav>
         </div>
     </header>
-
     <!-- Основной контент -->
     <main class="main">
         <div class="container">
@@ -50,7 +48,6 @@
             </div>
         </div>
     </main>
-
     <!-- Подвал -->
     <footer class="footer">
         <div class="container">
@@ -61,7 +58,7 @@
                 </ul>
                 <p class="address">Адрес школы: г. Владикавказ, ул. Владикавказская 69 Г</p>
             </nav>
-        </div> 
+        </div>
     </footer>
 
 </body>
